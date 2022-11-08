@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+body {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  max-width: 1440px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-input {
+  position: relative;
+  width: 100%;
+  transition: all 1s ease;
+}
+
+input#search {
+  position: absolute;
+  top: 1px;
+  right: -5px;
+  border: none;
+  outline: none;
+  padding: 37px;
+  border-radius: 5px;
+  width: 550px;
+  transition: all 1s ease;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  padding: 30px;
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+i.fa-solid.fa-arrows-spin {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.container-input.active > input {
+  transform: translateX(80px);
+  transition: all 1s ease;
+}
+
+.active input#search {
+  width: 0px;
+}
